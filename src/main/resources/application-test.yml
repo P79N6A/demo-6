@@ -1,0 +1,96 @@
+spring:
+  profiles: test
+
+  datasource:
+    druid:
+      url: jdbc:mysql://127.0.0.1:3307/test?useUnicode=true&characterEncoding=utf8&useSSL=false
+      username: root
+      password: 123456
+  redis:
+    port: 6379
+    host: 127.0.0.1
+    password: 123456
+
+ams:
+  appId: travel
+  appSecret: qQCrR5lswlUp3hr2
+  url: https://uams.bytedance.net
+
+ctrip:
+  appKey: obk_bytedance_test
+  appSecurity: obk_bytedance_test
+  corporationId: bytedance_test
+  callback: https://ct.ctrip.com/m
+  loginTicketUrl: https://ct.ctrip.com/corpservice/authorize/getticket
+  orderTokenUrl: https://ct.ctrip.com/SwitchAPI/Order/Ticket
+  saveCorpCustInfoListUrl: https://ct.ctrip.com/corpservice/CorpCustService/SaveCorpCustInfoList
+  isOpenedCardUrl: https://ct.ctrip.com/corpservice/OpenCard/IsOpenedCard?type=json
+  queryOrderUrl: https://corpsz.ctrip.com/order/queryOrderIdList
+  searchOrderUrl: https://ct.ctrip.com/switchapi/Order/SearchOrder
+  loginUrlPc: https://ct.ctrip.com/corpservice/authorize/login
+  loginUrlH5: https://ct.ctrip.com/m/SingleSignOn/H5SignInfo
+  backUrlCn: http://ct.ctrip.com
+  backUrlEn: http://ct.ctrip.com/en
+  flightOrderSettlementsUrl: https://ct.ctrip.com/switchapi/FlightOrderSettlement/GetCorpAccountFlightOrderSettlements?type=json
+  hotelOrderSettlementsUrl: https://ct.ctrip.com/switchapi/SettlementHltOrder/SearchSettlementHltOrderDetail
+
+didi:
+  clientId: e2a104834a2e0e96bfdb2e9740004741
+  signKey: fc7fB7A8b967BEE74009
+  clientSecret: e2dbe07fa7f3d758e6fae41dd3672581
+  grantType: client_credentials
+  phone: 13621147759
+  companyId: 8672389467564429243
+  host: http://api.es.xiaojukeji.com
+
+people:
+  host: https://open.byted.org/people/employees/v1/
+  authUsername: 148
+  authPassword: 3ACFB2E380A04FFD91F08AA119C59096
+
+eeDidi:
+  authUsername: 430
+  authPassword: 7FD20604C06642D5945986F7DFD8684B
+
+uber:
+  host: sftp.uber.com
+  port: 2222
+  username: 1fc8fa24
+  password:
+  identity: /home/admin/.ssh/id_rsa
+  outPath: /home/admin/uberData/
+  inputPath: /home/admin/uberData/
+  uploadPath: /test_to_uber/employees
+  downloadPath: /from_uber/trips
+
+shouqi:
+  publicKey: MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCtoB/zmOk3cXOKyAbx/lloaam8/dpUI8uDSEHz7mTEG+6D9lbiIoZ7ABEg+cXOSnSw7xrXnjjV/G4jOMv67BWujSomj1BPh5fiyX8avZwQj8IiWWN1Gu+qcsmH4Ec8ILdfZ0Ph9Iaj6m9hnPruyQpeLmn899EgRDaSZgWuRJ4/yQIDAQAB
+  dentifyingCodeUrl: https://test-gw-passenger.01zhuanche.com/gw-passenger/zhuanche-passenger-token/leachtoken/headlineJointOperation/getIdentifyingCode
+
+lark:
+  authUrl: https://open.zjurl.cn/connect/qrconnect/page/sso
+  userUrl: https://open.zjurl.cn/connect/qrconnect/oauth2/user_info/
+  tokenUrl: https://open.zjurl.cn/connect/qrconnect/oauth2/access_token/
+  yiqi:
+    redirectUrl: http://10.1.58.50:8300/yiqi/callback
+    clientId: cli_9c1b1679016f1102
+    clientSecret: MZ1Xjecl9G68emlWOzOdgftp8bffxn6a
+  uber:
+    loginUrl: https://travel-test.bytedance.net/uber/
+    redirectUrl: https://travel-test.bytedance.net/travelUber/callback
+    noPremissionUrl: https://travel-test.bytedance.net/uber/static/power-error.html
+    clientId: cli_9c3948468df4d101
+    clientSecret: DVPjaDwrQWganIIv5xMymfOMgn0u24b3
+  shouqi:
+    loginUrl: https://test-booking.01zhuanche.com/car.html#/channel_toutiao
+    redirectUrl: https://travel-test.bytedance.net/travel-shouqi/callback
+    noPremissionUrl: https://travel-test.bytedance.net/uber/static/power-error.html
+    clientId: cli_9c486f77e8735108
+    clientSecret: 75gDxYJdqxYMmp8RFvfpueBjXyG1Qnva
+
+
+mybatis:
+  mapper-locations: classpath:com.example.demo.store.mapper/*.xml
+  config-location: classpath:/mybatis-config.xml
+  type-aliases-package: com.example.demo.store.domain
+
